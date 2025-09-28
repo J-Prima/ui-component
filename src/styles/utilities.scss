@@ -1,0 +1,101 @@
+@use './_mixins.scss' as *;
+@use 'sass:color';
+/* Font weights */
+.font-weight-100 { @include font-weight(100); }
+.font-weight-300 { @include font-weight(300); }
+.font-weight-500 { @include font-weight(500); }
+.font-weight-700 { @include font-weight(700); }
+.font-weight-900 { @include font-weight(900); }
+
+/* Color variants: primary and secondary with subvariants */
+.color-primary-main { @include text-color(#007bff); }
+.color-primary-light { @include text-color(#66b2ff); }
+.color-primary-dark { @include text-color(#0056b3); }
+.color-primary-muted { @include text-color(#b3d7ff); }
+.color-primary-contrast { @include text-color(#fff); }
+.color-primary-success { @include text-color(#28a745); }
+.color-primary-danger { @include text-color(#dc3545); }
+.color-primary-warning { @include text-color(#ffc107); }
+.color-primary-info { @include text-color(#17a2b8); }
+.color-primary-text { @include text-color(#000); }
+
+
+// All secondary colors are lighter variants of primary
+.color-secondary-main { @include text-color(color.adjust(#007bff, $lightness: 20%)); }
+.color-secondary-light { @include text-color(color.adjust(#66b2ff, $lightness: +20%)); }
+.color-secondary-dark { @include text-color(color.adjust(#0056b3, $lightness: +20%)); }
+.color-secondary-muted { @include text-color(color.adjust(#b3d7ff, $lightness: +20%)); }
+.color-secondary-contrast { @include text-color(color.adjust(#fff, $lightness: +20%)); }
+.color-secondary-success { @include text-color(color.adjust(#28a745, $lightness: +20%)); }
+.color-secondary-danger { @include text-color(color.adjust(#dc3545, $lightness: +20%)); }
+.color-secondary-warning { @include text-color(color.adjust(#ffc107, $lightness: +20%)); }
+.color-secondary-info { @include text-color(color.adjust(#17a2b8, $lightness: +20%)); }
+.color-secondary-text { @include text-color(color.adjust(#000, $lightness: +20%)); }
+
+
+/* Spacing utilities */
+.m-0 { @include margin(top, 0); @include margin(bottom, 0); @include margin(left, 0); @include margin(right, 0); }
+.mt-1 { @include margin(top, 0.25rem); }
+.mb-1 { @include margin(bottom, 0.25rem); }
+.ml-1 { @include margin(left, 0.25rem); }
+.mr-1 { @include margin(right, 0.25rem); }
+.p-0 { @include padding(top, 0); @include padding(bottom, 0); @include padding(left, 0); @include padding(right, 0); }
+.pt-1 { @include padding(top, 0.25rem); }
+.pb-1 { @include padding(bottom, 0.25rem); }
+.pl-1 { @include padding(left, 0.25rem); }
+.pr-1 { @include padding(right, 0.25rem); }
+
+// Dynamic padding utilities
+@for $i from 1 through 5 {
+	.p-#{$i} { @include padding(top, $i * 0.25rem); @include padding(bottom, $i * 0.25rem); @include padding(left, $i * 0.25rem); @include padding(right, $i * 0.25rem); }
+	.pt-#{$i} { @include padding(top, $i * 0.25rem); }
+	.pb-#{$i} { @include padding(bottom, $i * 0.25rem); }
+	.pl-#{$i} { @include padding(left, $i * 0.25rem); }
+	.pr-#{$i} { @include padding(right, $i * 0.25rem); }
+}
+
+/* Display utilities */
+.d-block { @include display(block); }
+.d-inline { @include display(inline); }
+.d-inline-block { @include display(inline-block); }
+.d-flex { @include flex-center; flex-wrap: wrap; }
+.d-none { @include display(none); }
+
+/* Text alignment */
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+
+/* Border radius */
+.rounded { @include border-radius(0.25rem); }
+.rounded-pill { @include border-radius(50rem); }
+
+/* Width utilities */
+.w-100 { width: 100% !important; }
+.w-auto { width: auto !important; }
+
+/* Font size utilities */
+.font-size-xs { @include font-size(12px); }
+.font-size-sm { @include font-size(14px); }
+.font-size-md { @include font-size(16px); }
+.font-size-lg { @include font-size(20px); }
+.font-size-xl { @include font-size(24px); }
+.font-size-xxl { @include font-size(32px); }
+
+@media (max-width: 1024px) and (min-width: 600px) {
+	.font-size-xs { @include font-size(11px); }
+	.font-size-sm { @include font-size(13px); }
+	.font-size-md { @include font-size(15px); }
+	.font-size-lg { @include font-size(18px); }
+	.font-size-xl { @include font-size(22px); }
+	.font-size-xxl { @include font-size(28px); }
+}
+
+@media (max-width: 599px) {
+	.font-size-xs { @include font-size(10px); }
+	.font-size-sm { @include font-size(12px); }
+	.font-size-md { @include font-size(14px); }
+	.font-size-lg { @include font-size(16px); }
+	.font-size-xl { @include font-size(18px); }
+	.font-size-xxl { @include font-size(22px); }
+}

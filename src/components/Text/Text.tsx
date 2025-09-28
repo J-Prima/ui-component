@@ -1,18 +1,26 @@
 import React from 'react';
 
+type TextColor =
+    | 'primary-main' | 'primary-light' | 'primary-dark' | 'primary-muted' | 'primary-contrast'
+    | 'primary-success' | 'primary-danger' | 'primary-warning' | 'primary-info'
+    | 'secondary-main' | 'secondary-light' | 'secondary-dark' | 'secondary-muted' | 'secondary-contrast'
+    | 'secondary-success' | 'secondary-danger' | 'secondary-warning' | 'secondary-info';
+
 type TextProps = {
-    content: string;
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-    color?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | 'muted' | 'white';
-    weight?: '100' | '300' | '500' | '700' | '900';
-    style?: React.CSSProperties;
+        content: string;
+        size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+        color?: TextColor;
+        weight?: '100' | '300' | '500' | '700' | '900';
+        style?: React.CSSProperties;
 }
 
 const Text = (props: TextProps) => {
-    const { content, size = 'md', color = 'primary', weight = '500', style } = props;
+    const { content, size = 'md', color = 'primary-text', weight = '500', style } = props;
+    // Support color prop as 'primary-main', 'secondary-success', etc.
+    const colorClass = color ? `color-${color}` : '';
     const classNames = [
         'font-size-' + size,
-        'color-' + color,
+        colorClass,
         'font-weight-' + weight
     ].join(' ');
     return (

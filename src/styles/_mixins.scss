@@ -1,0 +1,39 @@
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+@mixin text-color($color) {
+  color: $color;
+}
+
+@mixin flex-center {
+  display: flex !important;
+  align-items: center;
+}
+@mixin padding($direction, $size) {
+  padding-#{$direction}: $size;
+}
+
+@mixin margin($direction, $size) {
+  margin-#{$direction}: $size;
+}
+
+@mixin display($display) {
+  display: $display;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin transition($properties, $duration: 0.3s, $timing-function: ease-in-out) {
+  transition: $properties $duration $timing-function;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}

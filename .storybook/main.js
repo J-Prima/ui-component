@@ -15,6 +15,19 @@ const config = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
-  }
+  },
+  viteFinal: (config) => {
+    config.resolve = config.resolve || {};
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias['@'] = require('path').resolve(__dirname, '../src');
+    config.css = {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "@/styles/_mixins.scss" as *;`,
+        },
+      },
+    };
+    return config;
+  },
 };
 export default config;
