@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build": "tsc && sass src/styles:dist/styles",
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static"
+
   },
   "keywords": [],
   "author": "",
