@@ -1,0 +1,49 @@
+@use 'sass:color' as sassColor;
+@use './_mixins.scss' as *;
+
+// SCSS variables for color values
+$primary-main: #007bff;
+$primary-light: #66b2ff;
+$primary-dark: #0056b3;
+$primary-muted: #b3d7ff;
+$primary-contrast: #fff;
+$primary-success: #28a745;
+$primary-danger: #dc3545;
+$primary-warning: #ffc107;
+$primary-info: #17a2b8;
+$primary-text: #000;
+
+$secondary-main: sassColor.adjust($primary-main, $lightness: 20%);
+$secondary-light: sassColor.adjust($primary-light, $lightness: 20%);
+$secondary-dark: sassColor.adjust($primary-dark, $lightness: 20%);
+$secondary-muted: sassColor.adjust($primary-muted, $lightness: 20%);
+$secondary-contrast: sassColor.adjust($primary-contrast, $lightness: 20%);
+$secondary-success: sassColor.adjust($primary-success, $lightness: 20%);
+$secondary-danger: sassColor.adjust($primary-danger, $lightness: 20%);
+$secondary-warning: sassColor.adjust($primary-warning, $lightness: 20%);
+$secondary-info: sassColor.adjust($primary-info, $lightness: 20%);
+$secondary-text: sassColor.adjust($primary-text, $lightness: 20%);
+
+/* Color variants: primary and secondary with subvariants */
+.color-primary-main { @include text-color(#007bff); }
+.color-primary-light { @include text-color(#66b2ff); }
+.color-primary-dark { @include text-color(#0056b3); }
+.color-primary-muted { @include text-color(#b3d7ff); }
+.color-primary-contrast { @include text-color(#fff); }
+.color-primary-success { @include text-color(#28a745); }
+.color-primary-danger { @include text-color(#dc3545); }
+.color-primary-warning { @include text-color(#ffc107); }
+.color-primary-info { @include text-color(#17a2b8); }
+.color-primary-text { @include text-color(#000); }
+
+// All secondary colors are lighter variants of primary
+.color-secondary-main { @include text-color(sassColor.adjust(#007bff, $lightness: 20%)); }
+.color-secondary-light { @include text-color(sassColor.adjust(#66b2ff, $lightness: 20%)); }
+.color-secondary-dark { @include text-color(sassColor.adjust(#0056b3, $lightness: 20%)); }
+.color-secondary-muted { @include text-color(sassColor.adjust(#b3d7ff, $lightness: 20%)); }
+.color-secondary-contrast { @include text-color(sassColor.adjust(#fff, $lightness: 20%)); }
+.color-secondary-success { @include text-color(sassColor.adjust(#28a745, $lightness: 20%)); }
+.color-secondary-danger { @include text-color(sassColor.adjust(#dc3545, $lightness: 20%)); }
+.color-secondary-warning { @include text-color(sassColor.adjust(#ffc107, $lightness: 20%)); }
+.color-secondary-info { @include text-color(sassColor.adjust(#17a2b8, $lightness: 20%)); }
+.color-secondary-text { @include text-color(sassColor.adjust(#000, $lightness: 20%)); }

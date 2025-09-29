@@ -1,0 +1,22 @@
+@use './_mixins.scss' as *;
+
+/* Spacing utilities */
+.m-0 { @include margin(top, 0); @include margin(bottom, 0); @include margin(left, 0); @include margin(right, 0); }
+.mt-1 { @include margin(top, 0.25rem); }
+.mb-1 { @include margin(bottom, 0.25rem); }
+.ml-1 { @include margin(left, 0.25rem); }
+.mr-1 { @include margin(right, 0.25rem); }
+.p-0 { @include padding(top, 0); @include padding(bottom, 0); @include padding(left, 0); @include padding(right, 0); }
+.pt-1 { @include padding(top, 0.25rem); }
+.pb-1 { @include padding(bottom, 0.25rem); }
+.pl-1 { @include padding(left, 0.25rem); }
+.pr-1 { @include padding(right, 0.25rem); }
+
+// Dynamic padding utilities
+@for $i from 1 through 5 {
+	.p-#{$i} { @include padding(top, $i * 0.25rem); @include padding(bottom, $i * 0.25rem); @include padding(left, $i * 0.25rem); @include padding(right, $i * 0.25rem); }
+	.pt-#{$i} { @include padding(top, $i * 0.25rem); }
+	.pb-#{$i} { @include padding(bottom, $i * 0.25rem); }
+	.pl-#{$i} { @include padding(left, $i * 0.25rem); }
+	.pr-#{$i} { @include padding(right, $i * 0.25rem); }
+}

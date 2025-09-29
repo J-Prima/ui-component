@@ -1,5 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from '@storybook/react';
+import { FONT_SIZE_OPTIONS, FONT_WEIGHT_OPTIONS, COLOR_CLASS_OPTIONS, DISPLAY_CLASS_OPTIONS, SPACING_CLASS_OPTIONS } from '../../types/style.types';
 
 const LazyTextField = React.lazy(() => import('./TextField'));
 
@@ -12,6 +13,40 @@ const meta: Meta<typeof LazyTextField> = {
             <Story />
         </React.Suspense>
     )],
+    args: {
+        label: 'Default TextField',
+        placeholder: 'Enter text here',
+        size: 'md',
+        color: 'primary-main',
+        weight: '500',
+        display: 'block',
+        padding: 'p-0',
+        style: { display: 'block', padding: '8px' },
+        inputStyle: { padding: '8px' },
+        labelStyle: { display: 'block', paddingBottom: '4px' },
+    },
+    argTypes: {
+        size: {
+            control: 'select',
+            options: FONT_SIZE_OPTIONS,
+        },
+        color: {
+            control: 'select',
+            options: COLOR_CLASS_OPTIONS,
+        },
+        weight: {
+            control: 'select',
+            options: FONT_WEIGHT_OPTIONS,
+        },
+        display: {
+            control: 'select',
+            options: DISPLAY_CLASS_OPTIONS,
+        },
+        padding: {
+            control: 'select',
+            options: SPACING_CLASS_OPTIONS,
+        },
+    },
 }
 
 export default meta;

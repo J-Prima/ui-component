@@ -1,0 +1,113 @@
+@use "../styles/_colors.scss" as *;
+
+.button {
+
+  border-radius: 4px;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  border: none;
+}
+
+// MUI-like variants
+.button--contained {
+  border: none;
+}
+.button--text {
+  background: none;
+  border: none;
+}
+.button--outlined {
+  background: none;
+  border: 2px solid currentColor;
+}
+
+// color-primary button combinations
+
+
+// color-primary color combinations
+
+.button--contained.color-primary-main         { background-color: $primary-main;         color: $primary-contrast; }
+.button--contained.color-primary-light        { background-color: $primary-light;        color: $primary-contrast; }
+.button--contained.color-primary-dark         { background-color: $primary-dark;         color: $primary-contrast; }
+.button--contained.color-primary-muted        { background-color: $primary-muted;        color: $primary-contrast; }
+.button--contained.color-primary-contrast     { background-color: $primary-contrast;     color: $primary-main; }
+
+
+.button--text.color-primary-main         { background: none; color: $primary-main; }
+.button--text.color-primary-light        { background: none; color: $primary-light; }
+.button--text.color-primary-dark         { background: none; color: $primary-dark; }
+.button--text.color-primary-muted        { background: none; color: $primary-muted; }
+.button--text.color-primary-contrast     { background: none; color: $primary-contrast; }
+
+
+.button--outlined.color-primary-main         { background: none; color: $primary-main; border-color: $primary-main; }
+.button--outlined.color-primary-light        { background: none; color: $primary-light; border-color: $primary-light; }
+.button--outlined.color-primary-dark         { background: none; color: $primary-dark; border-color: $primary-dark; }
+.button--outlined.color-primary-muted        { background: none; color: $primary-muted; border-color: $primary-muted; }
+.button--outlined.color-primary-contrast     { background: none; color: $primary-contrast; border-color: $primary-contrast; }
+
+// color-secondary button combinations
+
+
+// color-secondary color combinations
+
+.button--contained.color-secondary-main         { background-color: $secondary-main;         color: $secondary-contrast; }
+.button--contained.color-secondary-light        { background-color: $secondary-light;        color: $secondary-contrast; }
+.button--contained.color-secondary-dark         { background-color: $secondary-dark;         color: $secondary-contrast; }
+.button--contained.color-secondary-muted        { background-color: $secondary-muted;        color: $secondary-contrast; }
+.button--contained.color-secondary-contrast     { background-color: $secondary-contrast;     color: $secondary-main; }
+
+
+.button--text.color-secondary-main         { background: none; color: $secondary-main; }
+.button--text.color-secondary-light        { background: none; color: $secondary-light; }
+.button--text.color-secondary-dark         { background: none; color: $secondary-dark; }
+.button--text.color-secondary-muted        { background: none; color: $secondary-muted; }
+.button--text.color-secondary-contrast     { background: none; color: $secondary-contrast; }
+
+
+.button--outlined.color-secondary-main         { background: none; color: $secondary-main; border-color: $secondary-main; }
+.button--outlined.color-secondary-light        { background: none; color: $secondary-light; border-color: $secondary-light; }
+.button--outlined.color-secondary-dark         { background: none; color: $secondary-dark; border-color: $secondary-dark; }
+.button--outlined.color-secondary-muted        { background: none; color: $secondary-muted; border-color: $secondary-muted; }
+.button--outlined.color-secondary-contrast     { background: none; color: $secondary-contrast; border-color: $secondary-contrast; }
+
+// Success, Danger, Warning, Info
+
+
+// Status color combinations
+
+.button--contained.color-primary-success         { background-color: $primary-success;         color: $primary-contrast; }
+.button--contained.color-primary-danger          { background-color: $primary-danger;          color: $primary-contrast; }
+.button--contained.color-primary-warning         { background-color: $primary-warning;         color: $primary-contrast; }
+.button--contained.color-primary-info            { background-color: $primary-info;            color: $primary-contrast; }
+.button--contained.color-secondary-success       { background-color: $secondary-success;       color: $secondary-contrast; }
+.button--contained.color-secondary-danger        { background-color: $secondary-danger;        color: $secondary-contrast; }
+.button--contained.color-secondary-warning       { background-color: $secondary-warning;       color: $secondary-contrast; }
+.button--contained.color-secondary-info          { background-color: $secondary-info;          color: $secondary-contrast; }
+
+
+.button--text.color-primary-success         { background: none; color: $primary-success; }
+.button--text.color-primary-danger          { background: none; color: $primary-danger; }
+.button--text.color-primary-warning         { background: none; color: $primary-warning; }
+.button--text.color-primary-info            { background: none; color: $primary-info; }
+.button--text.color-secondary-success       { background: none; color: $secondary-success; }
+.button--text.color-secondary-danger        { background: none; color: $secondary-danger; }
+.button--text.color-secondary-warning       { background: none; color: $secondary-warning; }
+.button--text.color-secondary-info          { background: none; color: $secondary-info; }
+
+
+.button--outlined.color-primary-success         { background: none; color: $primary-success; border-color: $primary-success; }
+.button--outlined.color-primary-danger          { background: none; color: $primary-danger; border-color: $primary-danger; }
+.button--outlined.color-primary-warning         { background: none; color: $primary-warning; border-color: $primary-warning; }
+.button--outlined.color-primary-info            { background: none; color: $primary-info; border-color: $primary-info; }
+.button--outlined.color-secondary-success       { background: none; color: $secondary-success; border-color: $secondary-success; }
+.button--outlined.color-secondary-danger        { background: none; color: $secondary-danger; border-color: $secondary-danger; }
+.button--outlined.color-secondary-warning       { background: none; color: $secondary-warning; border-color: $secondary-warning; }
+.button--outlined.color-secondary-info          { background: none; color: $secondary-info; border-color: $secondary-info; }
+
+// Disabled state
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

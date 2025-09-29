@@ -1,0 +1,21 @@
+@use './_mixins.scss' as *;
+
+/* Display utilities */
+.d-block { @include display(block); }
+.d-inline { @include display(inline); }
+.d-inline-block { @include display(inline-block); }
+.d-flex { @include flex-center; flex-wrap: wrap; }
+.d-none { @include display(none); }
+
+/* Text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Border radius */
+.rounded { @include border-radius(0.25rem); }
+.rounded-pill { @include border-radius(50rem); }
+
+/* Width utilities */
+.w-100 { width: 100%; }
+.w-auto { width: auto; }

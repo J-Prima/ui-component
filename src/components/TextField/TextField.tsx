@@ -1,26 +1,5 @@
 import React from "react";
-
-type TextFieldColor =
-    | 'primary-main' | 'primary-light' | 'primary-dark' | 'primary-muted' | 'primary-contrast'
-    | 'primary-success' | 'primary-danger' | 'primary-warning' | 'primary-info'
-    | 'secondary-main' | 'secondary-light' | 'secondary-dark' | 'secondary-muted' | 'secondary-contrast'
-    | 'secondary-success' | 'secondary-danger' | 'secondary-warning' | 'secondary-info';
-
-type TextFieldProps = {
-        label: string;
-        placeholder?: string;
-        value?: string;
-        onChange?: (value: string) => void;
-        disabled?: boolean;
-        style?: React.CSSProperties;
-        inputStyle?: React.CSSProperties;
-        labelStyle?: React.CSSProperties;
-        size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-        color?: TextFieldColor;
-        weight?: '100' | '300' | '500' | '700' | '900';
-        display?: 'block' | 'inline-block' | 'inline';
-        padding?: 'pt-1' | 'pb-1' | 'pl-1' | 'pr-1' | 'p-0';
-}
+import { TextFieldProps } from "../../types/TextField.types";
 
 const TextField = (props: TextFieldProps) => {
     const {
