@@ -7,6 +7,7 @@ export const SPACING_CLASS_OPTIONS = [
   'pl-1', 'pl-2', 'pl-3', 'pl-4', 'pl-5',
   'pr-1', 'pr-2', 'pr-3', 'pr-4', 'pr-5',
 ] as const;
+
 export const DISPLAY_CLASS_OPTIONS = ['block', 'inline-block', 'inline', 'flex', 'none'] as const;
 export const FONT_SIZE_OPTIONS = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] as const;
 export const FONT_WEIGHT_OPTIONS = ['100', '300', '500', '700', '900'] as const;
