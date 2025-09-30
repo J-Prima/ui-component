@@ -19,6 +19,7 @@ export default defineConfig([
       "**/generated/**",
       "**/*.d.ts",
       "**/coverage/**",
+      "tsconfig.json",
       "**/.*/**", // ignore all hidden files/folders
     ],
   },
