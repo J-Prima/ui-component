@@ -9,7 +9,7 @@
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static",
     "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.json",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
