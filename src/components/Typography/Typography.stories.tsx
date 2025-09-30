@@ -1,9 +1,9 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const LazyTypography = React.lazy(() => import('./Typography'));
+const LazyTypography = React.lazy(() => import('./Typography.tsx'));
 
-import { FONT_SIZE_OPTIONS, FONT_WEIGHT_OPTIONS, COLOR_CLASS_OPTIONS } from '../../types/style.types';
+import { FONT_SIZE_OPTIONS, FONT_WEIGHT_OPTIONS, COLOR_CLASS_OPTIONS } from '../../types/style.types.ts';
 
 const meta: Meta<typeof LazyTypography> = {
     title: 'Atoms/Typography',
