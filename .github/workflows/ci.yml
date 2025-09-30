@@ -11,38 +11,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout full Git history for Chromatic
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # important for Chromatic
+          fetch-depth: 0  # important for Chromatic baseline commits
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm ci
 
+      # 4️⃣ Install Playwright browsers
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      # 5️⃣ Lint code
       - name: Lint
         run: npm run lint
 
+      # 6️⃣ Type checking
       - name: Type Check
         run: npm run typecheck
 
+      # 7️⃣ Unit tests with coverage
       - name: Unit Tests
         run: npm run test -- --coverage
 
+      # 8️⃣ Build Vite library
       - name: Build Library
-        run: npm run build  # Vite library build
+        run: npm run build
 
+      # 9️⃣ Build Storybook
       - name: Build Storybook
         run: npm run build-storybook
 
-      - name: Run Chromatic visual tests
-        run: npm run chromatic
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      # 🔟 Publish to Chromatic
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
