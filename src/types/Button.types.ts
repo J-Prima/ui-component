@@ -1,5 +1,5 @@
 export const BUTTON_VARIANT_OPTIONS = ['contained', 'text', 'outlined'] as const;
-import { FontSize, FontWeight } from "./style.types";
+import type { FontSize, FontWeight } from "./style.types.js";
 
 export type ButtonVariant = typeof BUTTON_VARIANT_OPTIONS[number];
 

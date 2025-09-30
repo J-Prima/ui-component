@@ -1,5 +1,5 @@
 import React from "react";
-import { TextFieldProps } from "../../types/TextField.types";
+import type { TextFieldProps } from "../../types/TextField.types.js";
 
 const TextField = (props: TextFieldProps) => {
     const {

@@ -1,4 +1,4 @@
-import { FontSize, FontWeight, ColorClass } from './style.types';
+import type { FontSize, FontWeight, ColorClass } from './style.types.js';
 
 export interface TypograpgyProps {
   value: string;
