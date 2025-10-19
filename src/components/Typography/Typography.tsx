@@ -1,5 +1,5 @@
 import React from "react";
-import { TypograpgyProps } from "../../types/Typography.types";
+import type { TypograpgyProps } from "../../types/Typography.types.js";
 
 const Typography = (props: TypograpgyProps) => {
     const { value, size = 'md', color = 'primary-text', weight = '500', style } = props;

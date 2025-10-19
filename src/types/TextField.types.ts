@@ -1,5 +1,5 @@
-import { DisplayClass, SpacingClass } from './style.types';
-import { TypograpgyProps } from './Typography.types';
+import type { DisplayClass, SpacingClass } from './style.types.js';
+import type { TypograpgyProps } from './Typography.types.js';
 
 export interface TextFieldProps extends TypograpgyProps {
     label: string;
