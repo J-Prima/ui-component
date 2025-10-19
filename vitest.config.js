@@ -12,6 +12,9 @@ const dirname =
 export default defineConfig({
   test: {
     environment: "node",
+     coverage: {
+      reporter: ['text', 'json', 'lcov'], // 👈 add 'lcov' here
+    },
     projects: [
       {
         extends: true,
